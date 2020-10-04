@@ -8,17 +8,14 @@ from datetime import datetime
 
 def generate_html(path_to_data):
     """Generates content of html file and saves it.
-
     Parameters
     ----------
     path_to_data : str
         Path to data with original images, predicted masks, and cropped according masks images.
-
     Returns
     -------
     str
         Content of html file.
-
     """
     html = "\n".join(["<!doctype html>", "<html>", "<head>",
                       "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>",
@@ -60,7 +57,6 @@ def generate_html(path_to_data):
 
 def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
     """Generates html file and saves it.
-
     Parameters
     ----------
     paths_to_imgs : list[str]
@@ -70,12 +66,10 @@ def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
     path_to_save : str
         Path to save source images to put them in html file. Html name is the same as name of the
         last folder on `path_to_save` and is saved on upper level.
-
     Returns
     -------
     str
         Content of html file.
-
     """
     paths_to_imgs = np.array(paths_to_imgs)
     pred_masks = np.array(pred_masks)
@@ -90,10 +84,13 @@ def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
     for path_to_img, pred_mask in zip(paths_to_imgs, pred_masks):
         img_id = path_to_img.split("/")[-1].split(".")[0]
         img = np.array(Image.open(path_to_img))[:, :, :3]
+        #img = img.convert("L")
         Image.fromarray(img).save(f"{path_to_save}/{img_id}_img.jpg")
-        Image.fromarray(pred_mask).save(f"{path_to_save}/{img_id}_pred_mask.jpg")
+        #pred_mask = pred_mask.convert("L")
+        Image.fromarray(pred_mask).convert("L").save(f"{path_to_save}/{img_id}_pred_mask.jpg")
         crop_img = img.copy()
         crop_img[pred_mask == 0] = 0
+        #crop_img = crop_img.convert("L")
         Image.fromarray(crop_img).save(f"{path_to_save}/{img_id}_crop.jpg")
 
     html = generate_html(path_to_save)
