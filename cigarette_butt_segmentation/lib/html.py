@@ -27,9 +27,9 @@ def generate_html(path_to_data):
     paths_to_imgs = sorted(
         ["/".join(path.split("/")[-2:]) for path in glob(f"{path_to_data}/*_img.jpg")])
     paths_to_masks = sorted(
-        ["/".join(path.split("/")[-2:]) for path in glob(f"{path_to_data}/*_pred_mask.png")])
+        ["/".join(path.split("/")[-2:]) for path in glob(f"{path_to_data}/*_pred_mask.jpg")])
     paths_to_crops = sorted(
-        ["/".join(path.split("/")[-2:]) for path in glob(f"{path_to_data}/*_crop.png")])
+        ["/".join(path.split("/")[-2:]) for path in glob(f"{path_to_data}/*_crop.jpg")])
     for ind, (path_to_img, path_to_mask, path_to_crop) in enumerate(zip(paths_to_imgs,
                                                                         paths_to_masks,
                                                                         paths_to_crops)):
@@ -91,10 +91,10 @@ def get_html(paths_to_imgs, pred_masks, path_to_save="results/test"):
         img_id = path_to_img.split("/")[-1].split(".")[0]
         img = np.array(Image.open(path_to_img))[:, :, :3]
         Image.fromarray(img).save(f"{path_to_save}/{img_id}_img.jpg")
-        Image.fromarray(pred_mask).save(f"{path_to_save}/{img_id}_pred_mask.png")
+        Image.fromarray(pred_mask).save(f"{path_to_save}/{img_id}_pred_mask.jpg")
         crop_img = img.copy()
         crop_img[pred_mask == 0] = 0
-        Image.fromarray(crop_img).save(f"{path_to_save}/{img_id}_crop.png")
+        Image.fromarray(crop_img).save(f"{path_to_save}/{img_id}_crop.jpg")
 
     html = generate_html(path_to_save)
 
