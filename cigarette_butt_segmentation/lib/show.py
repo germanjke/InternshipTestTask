@@ -34,12 +34,13 @@ def visualize(**images):
         plt.imshow(image)
     plt.show()
     
-def visualize_losses(valid_dict):
+def visualize_losses(valid_dict, model):
     """Create loss plot by dict of losses.
 
     Parameters
     ----------
     valid_dict : dict
+    model : model
     """  
 
     lists_valid = valid_dict.items()
