@@ -42,14 +42,14 @@ def visualize_losses(valid_dict):
     valid_dict : dict
     """  
 
-  lists_valid = valid_dict.items()
-  xv, yv = zip(*lists_valid) 
+    lists_valid = valid_dict.items()
+    xv, yv = zip(*lists_valid) 
 
-  # Visualize loss history
-  plt.plot(xv, yv, 'b-')
-  plt.legend(['Valid Loss'])
-  plt.title('Loss function', size = 18)
-  plt.xlabel('Epoch', size = 16)
-  plt.ylabel('Loss', size = 16)
-  plt.savefig(f'/content/drive/My Drive/ciggs/model_losses/{model.name}.png')
-  plt.show();
+    # Visualize loss history
+    plt.plot(xv, yv, 'b-')
+    plt.legend(['Valid Loss'])
+    plt.title('Loss function', size = 18)
+    plt.xlabel('Epoch', size = 16)
+    plt.ylabel('Loss', size = 16)
+    plt.savefig(f'/content/drive/My Drive/ciggs/model_losses/{model.name}.png')
+    plt.show();
