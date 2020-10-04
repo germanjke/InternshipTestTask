@@ -112,5 +112,5 @@ def download_masks(path_to_photos, path_to_masks):
       #mask = mask.astype(np.float32)
       result = cv2.imwrite(f'{path_to_masks}{i}', mask)
       if result:
-        print('Masks downloaded)
+        print('Masks downloaded')
 
