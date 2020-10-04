@@ -86,8 +86,6 @@ def decode_rle(rle_mask, shape=(512, 512)):
 
     return img.reshape(shape)
 
-def test():
-    return 1+1
 
 def download_masks(path_to_photos, path_to_masks):
   """Decodes mask from rle string.
