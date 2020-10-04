@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 from tqdm import tqdm
+import json
 
 def get_mask(img_id, annotations):
     """Returns mask.
