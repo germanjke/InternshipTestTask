@@ -86,6 +86,8 @@ def decode_rle(rle_mask, shape=(512, 512)):
 
     return img.reshape(shape)
 
+def test():
+    return 1+1
 
 def download_masks(path_to_photos, path_to_masks):
   """Decodes mask from rle string.
@@ -109,7 +111,6 @@ def download_masks(path_to_photos, path_to_masks):
   for i in tqdm(images):
       img_id = int(i[:8])
       mask = get_mask(img_id, annotations)
-      #mask = mask.astype(np.float32)
       result = cv2.imwrite(f'{path_to_masks}{i}', mask)
       if result:
         print('Masks downloaded')
