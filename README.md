@@ -28,6 +28,7 @@ A lot has been learned for segmentation, but I settled on `Unet`. If we talk abo
 ![valloss](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/loss_function_visuaalize/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202020-10-05%2021-45-57.png)
 
 ### Example of a result:
+![img](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/results/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202020-10-05%2021-50-11.png)
 
 ### Data:
 I made a few changes to the data. First, I changed the extension of the validation files to jpg. Second, I did not use the built-in function to display the mask, but the already existing pictures (for this I wrote a function to download them). This was needed for my dataset structure. All data you can check [here](https://drive.google.com/drive/folders/1eYlaoGxwuzo9B0WVmLErkwtoL7Ib7XHr?usp=sharing) on my Google Disk.
