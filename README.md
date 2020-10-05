@@ -20,7 +20,7 @@ The task was to make a segmentation of cigarette butts thrown on the ground.
 - `get_training_augmentation`, `get_validation_augmentation`, `to_tensor`, `get_preprocessing` for augmentations by `albumentations` lib
 
 ### Results:
-The result is presented in a [notebook](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/notebooks/please_dont_smoke.ipynb) (notebooks folder), as well as in an archive of photos (results folder)
+The result is presented in a [notebook](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/notebooks/please_dont_smoke.ipynb) (notebooks folder), as well as in an archive of photos (results folder), as well as `csv` file with predictions.
 
 ### Why this model?:
 A lot has been learned for segmentation, but I settled on `Unet`. If we talk about the architecture of the encoder, then I do not see any great advantage in a particular encoder for this task. For a task with multi-class segmentation, it is better to use an `efficient` network, but for a binary as such, there is no difference in the encoder. So i chose standart `resnet34`. You can check validaiton loss below:
