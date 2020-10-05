@@ -1,4 +1,4 @@
-### Check results in my drive [folder] html(https://drive.google.com/drive/folders/1eYlaoGxwuzo9B0WVmLErkwtoL7Ib7XHr?usp=sharing)
+### Check results in my drive [folder html](https://drive.google.com/drive/folders/1eYlaoGxwuzo9B0WVmLErkwtoL7Ib7XHr?usp=sharing)
 
 Something wrong with html on predicted mask but you can check results via notebook and result is ok:
 
