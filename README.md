@@ -23,3 +23,8 @@ The task was to make a segmentation of cigarette butts thrown on the ground.
 The result is presented in a laptop (notebooks folder), as well as in an archive of photos (results folder)
 
 ### Why this model?:
+
+### Example of a result:
+
+### Data:
+I made a few changes to the data. First, I changed the extension of the validation files to jpg. Second, I did not use the built-in function to display the mask, but the already existing pictures (for this I wrote a function to download them). This was needed for my dataset structure. All data you can check [here]() on my Google Disk.
