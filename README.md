@@ -1,4 +1,4 @@
-### Test Tech Task to Machine Intelligence Laboratory by MIPT
+### Test Tech Task to MIPT Machine Intelligence Laboratory (part-time job) by German Abramov
 
 The task was to make a segmentation of cigarette butts thrown on the ground. 
 
