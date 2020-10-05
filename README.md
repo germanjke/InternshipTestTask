@@ -20,11 +20,14 @@ The task was to make a segmentation of cigarette butts thrown on the ground.
 - `get_training_augmentation`, `get_validation_augmentation`, `to_tensor`, `get_preprocessing` for augmentations by `albumentations` lib
 
 ### Results:
-The result is presented in a laptop (notebooks folder), as well as in an archive of photos (results folder)
+The result is presented in a [notebook](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/notebooks/please_dont_smoke.ipynb) (notebooks folder), as well as in an archive of photos (results folder)
 
 ### Why this model?:
+A lot has been learned for segmentation, but I settled on `Unet`. If we talk about the architecture of the encoder, then I do not see any great advantage in a particular encoder for this task. For a task with multi-class segmentation, it is better to use an `efficient` network, but for a binary as such, there is no difference in the encoder. So i chose standart `resnet34`. You can check validaiton loss below:
+
+![valloss](https://github.com/germanjke/segmentation_of_cigg_butts/blob/master/cigarette_butt_segmentation/loss_function_visuaalize/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202020-10-05%2021-45-57.png)
 
 ### Example of a result:
 
 ### Data:
-I made a few changes to the data. First, I changed the extension of the validation files to jpg. Second, I did not use the built-in function to display the mask, but the already existing pictures (for this I wrote a function to download them). This was needed for my dataset structure. All data you can check [here]() on my Google Disk.
+I made a few changes to the data. First, I changed the extension of the validation files to jpg. Second, I did not use the built-in function to display the mask, but the already existing pictures (for this I wrote a function to download them). This was needed for my dataset structure. All data you can check [here](https://drive.google.com/drive/folders/1eYlaoGxwuzo9B0WVmLErkwtoL7Ib7XHr?usp=sharing) on my Google Disk.
